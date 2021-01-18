@@ -9,7 +9,7 @@ export class DataService {
 
   constructor(private http:HttpClient) { }
   searchprod(query:string){
-    const url = `https://world.openfoodfacts.org/cgi/search.pl?search_terms=${query}&page_size=2&json=true`;
+    const url = `https://world.openfoodfacts.org/cgi/search.pl?search_terms=${query}&page_size=5&json=true`;
     let obsprod = this.http.get(url);
     return obsprod;
   }
